@@ -26,20 +26,20 @@ app.get('/smoothies', (req, res) => res.render('smoothies'));
 app.use('/', authRoutes);
 
 // # 9 cookies
-app.get('/set-cookies', (req, res) => {
-  // res.setHeader('set-cookie', 'newUser=true')   // how to identify the cookie. set a cookie
+// app.get('/set-cookies', (req, res) => {
+//   // res.setHeader('set-cookie', 'newUser=true')   // how to identify the cookie. set a cookie
 
-  res.cookie('newUser', false);
-  res.cookie('isEmployee', true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true });
+//   res.cookie('newUser', false);
+//   res.cookie('isEmployee', true, { maxAge: 1000 * 60 * 60 * 24, httpOnly: true });
 
-  res.send('you got the cookies')
+//   res.send('you got the cookies')
 
-});
+// });
 
-app.get('/read-cookies', (req, res) => {
-  const cookies = req.cookies;  // cookies is javascript object, can use dot notation to get different cookies
-  console.log(cookies);
-  console.log(cookies.newUser);
+// app.get('/read-cookies', (req, res) => {
+//   const cookies = req.cookies;  // cookies is javascript object, can use dot notation to get different cookies
+//   console.log(cookies);
+//   console.log(cookies.newUser);
 
-  res.json(cookies);
-});
+//   res.json(cookies);
+// });
