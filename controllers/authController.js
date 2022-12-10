@@ -37,7 +37,7 @@ const maxAge = 3 * 24 * 60 * 60;  // three day = ? seconds; but coolie use milli
 const createToken = (id) => {
     return jwt.sign({ id }, 'net ninja secret', {
         expiresIn: maxAge
-    }) // the second P is secret.
+    }) // the second P is secret. sign({ id }: this is payload
 }
 
 module.exports.signup_get = (req, res) => {
