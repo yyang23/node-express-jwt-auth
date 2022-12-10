@@ -79,3 +79,7 @@ module.exports.login_post = async (req, res) => {
     }
 }
 
+module.exports.logout_get = (req, res) => {
+    res.cookie('jwt', '', { maxAge: 1}); // 1ms replace the jwt as ""
+    res.redirect('/'); // to home page
+}
